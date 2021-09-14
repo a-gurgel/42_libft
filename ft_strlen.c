@@ -6,18 +6,18 @@
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 22:20:26 by agurgel           #+#    #+#             */
-/*   Updated: 2021/08/29 15:24:52 by agurgel          ###   ########.fr       */
+/*   Updated: 2021/09/14 00:55:53 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char const *str)
+size_t	ft_strlen(char const *str)
 {
-    size_t len;
+	size_t	len;
 
-    len = 0;
-    while (str[len])
-            len++;
-    return (len);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

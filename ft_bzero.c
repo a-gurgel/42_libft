@@ -6,13 +6,13 @@
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 22:16:51 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/13 21:15:24 by agurgel          ###   ########.fr       */
+/*   Updated: 2021/09/14 00:49:37 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, '\0', n);
+	ft_memset(s, '\0', n);
 }

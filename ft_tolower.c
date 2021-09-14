@@ -6,15 +6,15 @@
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 22:25:34 by agurgel           #+#    #+#             */
-/*   Updated: 2021/08/29 16:04:20 by agurgel          ###   ########.fr       */
+/*   Updated: 2021/09/14 00:56:47 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c<= 90)
-        return (c + 32);
-    return (c);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
