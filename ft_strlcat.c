@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/28 22:16:02 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/14 16:09:42 by agurgel          ###   ########.fr       */
+/*   Created: 2021/09/14 14:45:35 by agurgel           #+#    #+#             */
+/*   Updated: 2021/09/14 15:18:58 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *src, int c, size_t n)
+size_t	ft_strlcat(char *dst, char const *src, size_t len)
 {
-	unsigned char	*s;
+	size_t	dn;
+	size_t	sn;
+	size_t	i;
+	size_t	j;
 
-	s = src;
-	while (n-- > 0)
-		*s++ = c;
-	return (src);
+	dn = ft_strlen(dst);
+	sn = ft_strlen(src);
+	i = dn;
+	j = 0;
+	if (dn >= len)
+		return (sn + len);
+	while (src[j] && i < (len - 1))
+		dst[i++] = src[j++];
+	dst[i] = '\0';
+	return (sn + dn);
 }

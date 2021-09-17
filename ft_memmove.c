@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/28 22:16:02 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/14 16:09:42 by agurgel          ###   ########.fr       */
+/*   Created: 2021/09/14 22:49:16 by agurgel           #+#    #+#             */
+/*   Updated: 2021/09/14 23:15:26 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *src, int c, size_t n)
+void	*ft_memmove(void *dst, void *src, size_t n)
 {
+	unsigned char	*d;
 	unsigned char	*s;
 
+	d = dst;
 	s = src;
-	while (n-- > 0)
-		*s++ = c;
-	return (src);
+	if (dst <= src)
+		return (ft_memcpy(dst, src, n));
+	d += n;
+	s += n;
+	while (n--)
+		*--d = *--s;
+	return (dst);
 }

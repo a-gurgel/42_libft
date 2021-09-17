@@ -6,10 +6,11 @@
 #    By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 22:50:29 by agurgel           #+#    #+#              #
-#    Updated: 2021/09/14 00:59:02 by agurgel          ###   ########.fr        #
+#    Updated: 2021/09/15 00:04:36 by agurgel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra -I. -c
 CC = clang
 FILES = ft_isalpha.c \
@@ -19,10 +20,15 @@ FILES = ft_isalpha.c \
 		ft_isprint.c \
 		ft_strlen.c \
 		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
 		ft_toupper.c \
 		ft_tolower.c \
-		ft_bzero.c \
-		ft_strlcpy.c \
+		ft_memchr.c \
+
 
 OBJFILES = $(FILES:%.c=%.o)
 

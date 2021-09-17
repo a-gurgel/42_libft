@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/28 22:16:02 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/14 16:09:42 by agurgel          ###   ########.fr       */
+/*   Created: 2021/09/15 00:04:01 by agurgel           #+#    #+#             */
+/*   Updated: 2021/09/15 00:20:27 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *src, int c, size_t n)
+void	*ft_memchr(void const *src, int c, size_t len)
 {
 	unsigned char	*s;
+	unsigned char	cc;
 
-	s = src;
-	while (n-- > 0)
-		*s++ = c;
-	return (src);
+	s = (unsigned char *) src;
+	cc = (unsigned char) c;
+	while (len--)
+	{
+		if (*s == cc)
+			return ((void *)s);
+		s++;
+	}
+	return (NULL);
 }
