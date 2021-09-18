@@ -6,7 +6,7 @@
 #    By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 22:50:29 by agurgel           #+#    #+#              #
-#    Updated: 2021/09/15 00:04:36 by agurgel          ###   ########.fr        #
+#    Updated: 2021/09/17 22:44:49 by agurgel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,16 @@ FILES = ft_isalpha.c \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c \
+		*ft_strnstr.c \
+		ft_atoi.c \
+
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
 
 OBJFILES = $(FILES:%.c=%.o)
