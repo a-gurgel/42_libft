@@ -6,7 +6,7 @@
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 22:44:59 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/17 22:53:43 by agurgel          ###   ########.fr       */
+/*   Updated: 2021/09/18 00:31:50 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	len;
+	size_t			s_len;
+	unsigned int	i;
 
-	len = 0;
-	if (!s || !f)
-		return ;
-	while (s[len])
+	s_len = ft_strlen(s);
+	i = 0;
+	while (i < s_len && s[i])
 	{
-		f(len, s + len);
-		len++;
+		f(i, &s[i]);
+		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 22:20:26 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/14 00:55:53 by agurgel          ###   ########.fr       */
+/*   Updated: 2021/09/18 00:05:44 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ size_t	ft_strlen(char const *str)
 	size_t	len;
 
 	len = 0;
-	while (str[len])
+	while (str[len] != '\0')
+	{
 		len++;
+	}
 	return (len);
 }

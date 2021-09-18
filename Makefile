@@ -6,7 +6,7 @@
 #    By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 22:50:29 by agurgel           #+#    #+#              #
-#    Updated: 2021/09/17 22:44:49 by agurgel          ###   ########.fr        #
+#    Updated: 2021/09/18 01:15:08 by agurgel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,12 +27,16 @@ FILES = ft_isalpha.c \
 		ft_strlcat.c \
 		ft_toupper.c \
 		ft_tolower.c \
+		*ft_strchr.c \
+		*ft_strrchr.c \
 		ft_memchr.c \
+		ft_strncmp.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
 		*ft_strnstr.c \
 		ft_atoi.c \
-
+		*ft_calloc.c \
+		*ft_strdup.c \
 		ft_striteri.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \

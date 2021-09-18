@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agurgel <agurgel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 22:15:24 by agurgel           #+#    #+#             */
-/*   Updated: 2021/09/18 00:55:03 by agurgel          ###   ########.fr       */
+/*   Created: 2021/09/18 00:16:39 by agurgel           #+#    #+#             */
+/*   Updated: 2021/09/18 00:24:10 by agurgel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	size_t	s_len;
+	char	*ptr;
+
+	ptr = (char *)s;
+	s_len = ft_strlen(ptr) + 1;
+	while (s_len--)
 	{
-		write(fd, s++, 1);
+		if (*ptr == (unsigned char)c)
+			return (ptr);
+		ptr++;
 	}
+	return (NULL);
 }
